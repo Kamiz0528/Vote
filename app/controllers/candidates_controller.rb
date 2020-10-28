@@ -1,6 +1,7 @@
 class CandidatesController < ApplicationController
 
   def index
+    @candidates = Candidate.all
   end
 
   def new
@@ -16,6 +17,7 @@ class CandidatesController < ApplicationController
       redirect_to '/candidates'
     else
       #NG
+      render :new
     end
   end
 
