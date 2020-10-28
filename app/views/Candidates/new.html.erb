@@ -1,5 +1,14 @@
 <h1>Add Candidate</h1>
 
+<% if @candidate.errors.any? %>
+
+  <ul>
+    <% @candidate.errors.full_messages.each do |message|%>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+
+  <% end %>
 <!-- <form action="/candidates" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="text" name="abc">
